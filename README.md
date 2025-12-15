@@ -23,9 +23,6 @@ https://github.com/Hyeokjina/Diary-Project-react
 </sub>
 
 
-<sub>🔗 프론트엔드 프로젝트:
-https://github.com/Hyeokjina/Diary-Project-react
-</sub>
 ## 프로젝트 개요
 
 이 프로젝트는 일기장 기능을 제공하는 RESTful API 서버로, 회원가입/로그인, 일기 CRUD 기능을 제공합니다.
