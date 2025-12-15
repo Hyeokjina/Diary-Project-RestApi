@@ -3,6 +3,7 @@
 React 일기장 프로젝트에서 사용할 백엔드 REST API 서버입니다.
 해당 프로젝트는 Diary-Project-react에서 사용된 프로젝트를 REST API로 변환해보는 프로젝트입니다!
 <sub>Diary-Project-react주소: ([https://github.com/Hyeokjina/Diary-Project-react](https://github.com/Hyeokjina/Diary-Project-react))</sub>
+
 ## 프로젝트 개요
 
 이 프로젝트는 일기장 기능을 제공하는 RESTful API 서버로, 회원가입/로그인, 일기 CRUD 기능을 제공합니다.
