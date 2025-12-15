@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 한 줄 - 홈</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .home-container {
+            padding: 4px 20px;
+        }
+        .home-title {
+            font-size: 48px;
+            color: #6C63FF;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .stats-label {
+            font-size: 15px;
+            padding-bottom: 1px;
+            padding-right: 450px;
+            color: #6b6b6b;
+            font-weight: 800;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .stat-card.happy { border-top: 4px solid #4ECDC4; }
+        .stat-card.sad { border-top: 4px solid #5C7AEA; }
+        .stat-card.normal { border-top: 4px solid #45B649; }
+        .stat-card.fire { border-top: 4px solid #FF6B6B; }
+        .stat-emoji {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+        .stat-count {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #7F8C8D;
+        }
+        .button-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-left: 42px;
+        }
+        .btn-home {
+            padding: 16px 32px;
+            background: #6C63FF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .btn-home.secondary {
+            background: #4ECDC4;
+        }
+        .login-prompt {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .login-prompt p {
+            font-size: 18px;
+            color: #7F8C8D;
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo" onclick="location.href='/home.html'">오늘 한 줄</div>
+            <div class="nav-links">
+                <a href="/home.html" class="nav-link" id="homeLink">홈</a>
+                <a href="/diaryList.html" class="nav-link" id="boardLink">게시판</a>
+            </div>
+            <div class="auth-buttons">
+                <span id="userNickname" class="user-info"></span>
+                <button id="myPageBtn" class="btn-mypage" style="display: none;" onclick="location.href='/mypage.html'">내 정보</button>
+                <button id="logoutBtn" class="btn-logout" style="display: none;">로그아웃</button>
+                <a id="loginBtn" href="/login.html" class="nav-link">로그인</a>
+                <a id="signupBtn" href="/signup.html" class="nav-link">회원가입</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="home-container">
+            <h1 class="home-title">오늘 한 줄</h1>
+
+            <div id="loginPrompt" class="login-prompt">
+                <p>하루를 100자로 기록하는 미니멀 일기장</p>
+                <div class="button-group">
+                    <button class="btn-home" onclick="location.href='/login.html'">로그인</button>
+                    <button class="btn-home secondary" onclick="location.href='/signup.html'">회원가입</button>
+                </div>
+            </div>
+
+            <div id="homeContent" style="display: none;">
+                <p class="stats-label">작성된 나의 감정 통계</p>
+                <div class="stats-grid" id="statsGrid"></div>
+                <div class="button-group">
+                    <button class="btn-home" onclick="location.href='/diaryWrite.html'">일기 쓰기</button>
+                    <button class="btn-home secondary" onclick="location.href='/diaryList.html'">내 일기장 보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>
+
